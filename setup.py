@@ -392,7 +392,7 @@ def setup_package():
     from setuptools import setup
 
     if run_build:
-        from numpy.distutils.core import setup
+        import setuptools;from numpy.distutils.core import setup
         cwd = os.path.abspath(os.path.dirname(__file__))
         if not os.path.exists(os.path.join(cwd, 'PKG-INFO')):
             # Generate Cython sources, unless building from source release
